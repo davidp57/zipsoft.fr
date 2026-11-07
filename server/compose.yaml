@@ -1,0 +1,16 @@
+# zipsoft.fr website on the zipsoft VPS: /srv/docker/zipsoft-site/compose.yaml (Komodo stack "zipsoft-site").
+# deploy.yml (GitHub Actions) fills ./public by rsync; the main Caddy proxies zipsoft.fr here.
+services:
+  zipsoft-site:
+    image: caddy:2
+    container_name: zipsoft-site
+    restart: unless-stopped
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./public:/srv:ro
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

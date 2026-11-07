@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="prose">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</section>
+{{- $section := . }}
+{{- range slice "games" "dcs" "apps" }}
+{{- $category := . }}
+{{- with where $section.RegularPages "Params.category" $category }}
+<section aria-labelledby="cat-{{ $category }}">
+  <h2 id="cat-{{ $category }}">{{ T $category }}</h2>
+  <div class="cards">
+    {{- range . }}
+    {{ partial "card.html" . }}
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+{{- end }}
+{{ end }}

@@ -1,0 +1,5 @@
+<footer class="bottom">
+  <p>© {{ now.Year }} {{ site.Params.author }}
+    · <a href="{{ site.Params.github }}">GitHub</a>
+    · {{ with site.GetPage "/legal" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>
+</footer>

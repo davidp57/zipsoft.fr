@@ -1,0 +1,13 @@
+---
+title: "VEAF Mission Creation Tools"
+weight: 2
+category: dcs
+role: author
+org: "VEAF"
+featured: true
+links:
+  code: "https://github.com/VEAF/VEAF-Mission-Creation-Tools"
+---
+
+La boîte à outils complète pour créer des missions dynamiques pour DCS World avec les scripts Lua de la VEAF et ses outils d'automatisation.
+Un assistant IA (Claude, Codex, Gemini…) peut construire et modifier les missions avec.

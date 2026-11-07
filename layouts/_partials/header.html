@@ -1,0 +1,16 @@
+<header class="top">
+  <a class="brand" href="{{ site.Home.RelPermalink }}"><span class="prompt" aria-hidden="true">~/</span>zipsoft</a>
+  <nav aria-label="Menu">
+    <ul>
+      {{- $current := . }}
+      {{- range slice "/realisations" "/contact" }}
+      {{- with site.GetPage . }}
+      <li><a href="{{ .RelPermalink }}"{{ if or (eq .RelPermalink $current.RelPermalink) ($current.IsDescendant .) }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
+      {{- end }}
+      {{- end }}
+      {{- range .Translations }}
+      <li><a class="lang" href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+</header>

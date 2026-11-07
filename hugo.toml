@@ -1,0 +1,26 @@
+# zipsoft.fr — David "Zip" Pierron's website.
+# Build: hugo --minify --panicOnWarning   ·   Preview: hugo server
+baseURL = "https://zipsoft.fr/"
+title = "zipsoft"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy", "term", "RSS"]
+enableRobotsTXT = true
+
+[params]
+  author = 'David "Zip" Pierron'
+  github = "https://github.com/davidp57"
+  contact = "contact@zipsoft.fr"
+
+[languages]
+  [languages.fr]
+    label = "Français"
+    weight = 1
+    contentDir = "content/fr"
+  [languages.en]
+    label = "English"
+    weight = 2
+    contentDir = "content/en"
+
+[markup.goldmark.renderer]
+  unsafe = true   # our own content only

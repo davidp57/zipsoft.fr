@@ -1,0 +1,27 @@
+# Serves the built site; HTTPS and the domain are the main Caddy's job (block zipsoft.fr).
+{
+	admin off
+	auto_https off
+}
+
+:80 {
+	root * /srv
+	encode zstd gzip
+	file_server
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+	# only files whose name carries their content (fingerprinted CSS, processed images)
+	@immutable path /css/* /img/*
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+
+	handle_errors {
+		@en path /en/*
+		rewrite @en /en/404.html
+		rewrite * /404.html
+		file_server
+	}
+}

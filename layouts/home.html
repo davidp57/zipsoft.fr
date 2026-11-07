@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="intro prose">
+  {{ .Content }}
+</section>
+{{- with site.GetPage "/realisations" }}
+<section aria-labelledby="featured">
+  <h2 id="featured">{{ T "featured" }}</h2>
+  <div class="cards">
+    {{- range where .RegularPages "Params.featured" true }}
+    {{ partial "card.html" . }}
+    {{- end }}
+  </div>
+  <p class="more"><a href="{{ .RelPermalink }}">{{ T "allWorks" }} →</a></p>
+</section>
+{{- end }}
+{{ end }}

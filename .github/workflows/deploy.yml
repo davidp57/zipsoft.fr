@@ -1,0 +1,55 @@
+name: Deploy
+
+# Builds the site with Hugo and copies it to the zipsoft VPS by rsync over SSH, on every push to
+# main and on demand. The deploy key (secret DEPLOY_KEY) is restricted on the server to rrsync in
+# /srv/docker/zipsoft-site/public: it can write that folder and nothing else. Without the secret,
+# the job builds the site and says it skipped the upload. A pull request only builds it.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  HUGO_VERSION: 0.168.0
+  # the VPS host key, from ssh-keyscan, checked against an existing known_hosts
+  VPS_HOST: 2.24.53.98
+  VPS_HOST_KEY: "2.24.53.98 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJYtm+mPAq+QOkDoPTp4dYES4RFvFJcDGZOG9DpsE0nK"
+  DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hugo
+        run: |
+          curl -sSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz" | tar -xz -C "$RUNNER_TEMP" hugo
+          "$RUNNER_TEMP/hugo" version
+      - name: Build
+        run: |
+          "$RUNNER_TEMP/hugo" --minify --panicOnWarning
+      - name: Upload
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          if [ -z "$DEPLOY_KEY" ]; then
+            echo "::notice::No DEPLOY_KEY secret: the site was built, not uploaded."
+            exit 0
+          fi
+          mkdir -p ~/.ssh
+          echo "$VPS_HOST_KEY" > ~/.ssh/known_hosts
+          echo "$DEPLOY_KEY" > ~/.ssh/deploy
+          chmod 600 ~/.ssh/deploy
+          # rrsync on the server roots every path in the site folder: "./" is /srv/docker/zipsoft-site/public
+          rsync -rlz --delete --checksum -e "ssh -i ~/.ssh/deploy -o IdentitiesOnly=yes" public/ "david@${VPS_HOST}:./"
+          echo "OK: site uploaded."
+      - name: Check
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.DEPLOY_KEY != ''
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" https://zipsoft.fr/)
+          echo "https://zipsoft.fr/ answers $code"
+          test "$code" = 200

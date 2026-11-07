@@ -1,0 +1,19 @@
+{{- /* One project: its picture if it has one, two lines, the role, the links. */}}
+<article class="card{{ with .Params.image }} with-image{{ end }}">
+  {{- with .Params.image }}
+  {{- with resources.Get . }}
+  {{- $img := .Resize "600x webp q82" }}
+  <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" loading="lazy">
+  {{- end }}
+  {{- end }}
+  <div class="body">
+    <h3>{{ .Title }}</h3>
+    <p class="role">{{ if eq .Params.role "contributor" }}{{ T "contributor" }}{{ else }}{{ T "author" }}{{ end }}{{ with .Params.org }} · {{ . }}{{ end }}{{ with .Params.tech }} · {{ . }}{{ end }}</p>
+    <div class="text">{{ .Content }}</div>
+    <p class="links">
+      {{- with .Params.links.site }}<a href="{{ . }}">{{ T "site" }}</a>{{ end }}
+      {{- with .Params.links.docs }}<a href="{{ . }}">{{ T "docs" }}</a>{{ end }}
+      {{- with .Params.links.code }}<a href="{{ . }}">{{ T "code" }}</a>{{ end }}
+    </p>
+  </div>
+</article>
