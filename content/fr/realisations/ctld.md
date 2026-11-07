@@ -7,7 +7,7 @@ image: "img/covers/ctld.svg"
 org: "VEAF"
 links:
   discord: "https://discord.gg/YezPzzQ"
-  docs: "https://veaf.github.io/CTLD/"
+  docs: "https://veaf.github.io/CTLD/dev/fr/"
   code: "https://github.com/VEAF/CTLD"
 ---
 
