@@ -1,7 +1,7 @@
 # zipsoft.fr
 
 Le site de David "Zip" Pierron : https://zipsoft.fr, en français à la racine et en anglais sous `/en/`.
-Une page d'accueil, les réalisations (jeux, outils pour DCS World, applications), le contact et les mentions légales.
+Une page d'accueil qui présente toutes les réalisations (jeux, outils pour DCS World, applications, puis les projets auxquels je contribue), le contact et les mentions légales.
 
 ## Construire
 
@@ -23,7 +23,6 @@ weight: 13                  # l'ordre dans sa catégorie
 category: dcs               # games, dcs ou apps
 role: author                # author ou contributor
 org: "VEAF"                 # facultatif
-featured: true              # facultatif : en tête de l'accueil
 image: "img/projet.png"     # une image dans assets/img/ (capture réduite par Hugo, ou SVG tel quel)
 links:
   site: "https://…"         # facultatifs, dans cet ordre : site, docs, code
@@ -33,9 +32,9 @@ links:
 Deux lignes de présentation, une phrase par ligne.
 ```
 
-Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur la page des réalisations et sur l'accueil.
-Sur la page des réalisations, les projets `author` sont rangés par catégorie, et les `contributor` (les projets d'autres auxquels je participe) ont leur propre partie, « Contributions », à la fin.
-L'accueil ne montre que les projets `author`, neuf au plus : les `featured` d'abord, puis les autres par `weight`.
+Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur l'accueil, et toutes les fiches y sont.
+Les projets `author` sont dans « Mes réalisations », rangés par catégorie (jeux, DCS, applications) puis par `weight` (une catégorie inconnue arrête la construction) ; les `contributor` (les projets d'autres auxquels je participe) ont leur propre partie, « Mes contributions », à la fin.
+Le dossier `realisations/` ne sert qu'à ranger les fiches : il n'est pas construit en page, et ses anciennes adresses (`/realisations/`, `/en/projects/`) redirigent vers l'accueil de leur langue.
 Un projet sans capture d'écran reçoit une illustration dessinée : sa couverture s'ajoute dans `tools/covers.py`, puis `python tools/covers.py assets/img/covers` les redessine toutes.
 
 ## Le style

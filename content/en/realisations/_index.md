@@ -1,8 +1,10 @@
 ---
 title: "Projects"
-description: "Games, DCS World tools and applications by David \"Zip\" Pierron."
-url: "/en/projects/"
-# cards only: a project has no page of its own (yet)
+# A data folder, not a page: the home page shows these cards (layouts/home.html).
+# Neither the section nor the cards are built; the old /en/projects/ URL redirects to the home page.
+build:
+  render: never
+  list: never
 cascade:
   - target:
       kind: page
@@ -10,6 +12,3 @@ cascade:
       render: never
       list: always
 ---
-
-What I have made, then the projects I contribute to.
-Almost all of it is open source: the code is on GitHub.

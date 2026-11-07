@@ -2,18 +2,42 @@
 <section class="intro prose">
   {{ .Content }}
 </section>
+{{- /* every project, as cards: what I made, by category, then the projects of others I contribute to.
+  The cards live in content/<lang>/realisations/, a section that has no page of its own. */}}
 {{- with site.GetPage "/realisations" }}
-<section aria-labelledby="featured">
-  <h2 id="featured">{{ T "featured" }}</h2>
+{{- $mine := where .RegularPages "Params.role" "!=" "contributor" }}
+{{- $categories := slice "games" "dcs" "apps" }}
+{{- range where $mine "Params.category" "not in" $categories }}
+{{- warnf "%s: category %q is not one of %v, the card is not on the home page" .File.Path .Params.category $categories }}
+{{- end }}
+{{- with $mine }}
+<section aria-labelledby="projects">
+  <h2 id="projects">{{ T "projects" }}</h2>
+  {{- range $categories }}
+  {{- $category := . }}
+  {{- with where $mine "Params.category" $category }}
+  <section class="category" aria-labelledby="cat-{{ $category }}">
+    <h3 id="cat-{{ $category }}">{{ T $category }}</h3>
+    <div class="cards">
+      {{- range .ByWeight }}
+      {{ partial "card.html" (dict "page" . "level" 4) }}
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+  {{- end }}
+</section>
+{{- end }}
+{{- with where .RegularPages "Params.role" "contributor" }}
+<section aria-labelledby="contributions">
+  <h2 id="contributions">{{ T "contributions" }}</h2>
+  <p class="lead">{{ T "contributionsText" }}</p>
   <div class="cards">
-    {{- /* my own projects only (contributions are on the projects page): the featured ones first, then the others by weight, three rows of three on a wide screen */}}
-    {{- $mine := where .RegularPages "Params.role" "!=" "contributor" }}
-    {{- $featured := where $mine "Params.featured" true }}
-    {{- range first 9 ($featured | union $mine.ByWeight) }}
-    {{ partial "card.html" . }}
+    {{- range .ByWeight }}
+    {{ partial "card.html" (dict "page" . "level" 3) }}
     {{- end }}
   </div>
-  <p class="more"><a href="{{ .RelPermalink }}">{{ T "allWorks" }} →</a></p>
 </section>
+{{- end }}
 {{- end }}
 {{ end }}

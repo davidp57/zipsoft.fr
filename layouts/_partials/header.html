@@ -3,7 +3,7 @@
   <nav aria-label="Menu">
     <ul>
       {{- $current := . }}
-      {{- range slice "/realisations" "/contact" }}
+      {{- range slice "/contact" }}
       {{- with site.GetPage . }}
       <li><a href="{{ .RelPermalink }}"{{ if or (eq .RelPermalink $current.RelPermalink) ($current.IsDescendant .) }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
       {{- end }}

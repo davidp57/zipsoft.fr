@@ -3,7 +3,6 @@ title: "Iron Gall"
 weight: 1
 category: games
 role: author
-featured: true
 image: "img/irongall.png"
 links:
   site: "https://irongall.zipsoft.fr"
