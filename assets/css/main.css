@@ -73,6 +73,7 @@ code { font: .9em var(--mono); background: var(--accent-soft); padding: .1em .35
 .card .links a { font: .85rem var(--mono); padding: .2rem .6rem; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; }
 .card .links a:hover { border-color: var(--accent); background: var(--accent-soft); }
 .more { margin-top: 1.2rem; font-family: var(--mono); }
+.lead { margin: -.4rem 0 1rem; color: var(--muted); }
 
 /* Footer */
 .bottom { padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }

@@ -11,5 +11,5 @@ cascade:
       list: always
 ---
 
-What I have made, or contributed to.
+What I have made, then the projects I contribute to.
 Almost all of it is open source: the code is on GitHub.
