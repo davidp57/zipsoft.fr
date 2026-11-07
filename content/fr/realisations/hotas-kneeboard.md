@@ -6,6 +6,7 @@ role: author
 image: "img/hotas-kneeboard.png"
 org: "VEAF"
 links:
+  discord: "https://discord.gg/YezPzzQ"
   docs: "https://veaf.github.io/hotas-kneeboard/"
   code: "https://github.com/VEAF/hotas-kneeboard"
 ---

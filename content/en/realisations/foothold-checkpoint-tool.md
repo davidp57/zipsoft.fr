@@ -6,6 +6,7 @@ role: author
 image: "img/covers/foothold-checkpoint-tool.svg"
 org: "VEAF"
 links:
+  discord: "https://discord.gg/YezPzzQ"
   code: "https://github.com/VEAF/VEAF-foothold-checkpoint-tool"
 ---
 
