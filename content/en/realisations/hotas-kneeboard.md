@@ -7,6 +7,7 @@ image: "img/hotas-kneeboard.en.png"
 org: "VEAF"
 featured: true
 links:
+  docs: "https://veaf.github.io/hotas-kneeboard/"
   code: "https://github.com/VEAF/hotas-kneeboard"
 ---
 

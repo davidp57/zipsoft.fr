@@ -2,7 +2,7 @@
 title: "Issued"
 weight: 7
 category: apps
-role: author
+role: contributor
 image: "img/covers/issued.svg"
 links:
   site: "https://useissued.com"
