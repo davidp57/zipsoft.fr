@@ -3,6 +3,7 @@ title: "HOTAS Kneeboard"
 weight: 3
 category: dcs
 role: author
+image: "img/hotas-kneeboard.png"
 org: "VEAF"
 featured: true
 links:

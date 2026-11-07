@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+<style>
+.bg-t{stop-color:#e6f3f0}.bg-b{stop-color:#d2e9e3}
+.i{fill:none;stroke:#1d5a53;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.a{fill:none;stroke:#c2662d;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.f{fill:#1d5a53}.fa{fill:#c2662d}.d{fill:#1d5a53;opacity:.13}
+@media (prefers-color-scheme: dark){
+.bg-t{stop-color:#16231f}.bg-b{stop-color:#101a17}
+.i{stroke:#8fd0c4}.a{stroke:#e58c4f}.f{fill:#8fd0c4}.fa{fill:#e58c4f}.d{fill:#8fd0c4;opacity:.12}
+}
+</style>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="bg-t"/><stop offset="1" class="bg-b"/></linearGradient>
+<pattern id="p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="1.6" class="d"/></pattern>
+</defs>
+<rect width="600" height="300" fill="url(#g)"/>
+<rect width="600" height="300" fill="url(#p)"/>
+
+<path class="i" d="M150 120 H230 L250 140 H350 V250 H150 Z"/>
+<rect class="i" x="260" y="70" width="190" height="140" rx="10"/>
+<path class="i" d="M285 70 V210 M425 70 V210"/>
+<path class="i" d="M260 100 H285 M260 140 H285 M260 180 H285 M425 100 H450 M425 140 H450 M425 180 H450"/>
+<path class="a" d="M340 112 L380 140 L340 168 Z"/>
+<path class="a" d="M285 230 H450"/><circle class="fa" cx="380" cy="230" r="8"/>
+
+</svg>

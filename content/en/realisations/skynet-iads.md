@@ -3,6 +3,7 @@ title: "Skynet-IADS"
 weight: 6
 category: dcs
 role: contributor
+image: "img/covers/skynet-iads.svg"
 org: "VEAF"
 links:
   docs: "https://veaf.github.io/Skynet-IADS/"

@@ -3,6 +3,7 @@ title: "CTLD"
 weight: 5
 category: dcs
 role: contributor
+image: "img/covers/ctld.svg"
 org: "VEAF"
 links:
   docs: "https://veaf.github.io/CTLD/"

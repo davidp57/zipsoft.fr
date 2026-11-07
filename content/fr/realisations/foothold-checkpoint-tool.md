@@ -3,6 +3,7 @@ title: "Foothold Checkpoint Tool"
 weight: 4
 category: dcs
 role: author
+image: "img/covers/foothold-checkpoint-tool.svg"
 org: "VEAF"
 links:
   code: "https://github.com/VEAF/VEAF-foothold-checkpoint-tool"

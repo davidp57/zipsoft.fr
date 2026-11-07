@@ -3,6 +3,7 @@ title: "VEAF Mission Creation Tools"
 weight: 2
 category: dcs
 role: author
+image: "img/vmct.png"
 org: "VEAF"
 featured: true
 links:

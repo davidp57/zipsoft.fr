@@ -3,6 +3,7 @@ title: "Issued"
 weight: 7
 category: apps
 role: author
+image: "img/covers/issued.svg"
 links:
   site: "https://useissued.com"
   code: "https://github.com/davidp57/issued"

@@ -6,7 +6,9 @@
 <section aria-labelledby="featured">
   <h2 id="featured">{{ T "featured" }}</h2>
   <div class="cards">
-    {{- range where .RegularPages "Params.featured" true }}
+    {{- /* the featured ones first, then the others by weight: three rows of three on a wide screen */}}
+    {{- $featured := where .RegularPages "Params.featured" true }}
+    {{- range first 9 ($featured | union .RegularPages.ByWeight) }}
     {{ partial "card.html" . }}
     {{- end }}
   </div>

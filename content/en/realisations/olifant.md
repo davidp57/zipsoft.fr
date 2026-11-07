@@ -3,6 +3,7 @@ title: "Olifant"
 weight: 11
 category: apps
 role: author
+image: "img/covers/olifant.svg"
 links:
   code: "https://github.com/davidp57/olifant"
 ---

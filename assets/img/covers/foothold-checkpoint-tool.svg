@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+<style>
+.bg-t{stop-color:#e8eef6}.bg-b{stop-color:#d5e0ee}
+.i{fill:none;stroke:#2b4466;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.a{fill:none;stroke:#c2662d;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.f{fill:#2b4466}.fa{fill:#c2662d}.d{fill:#2b4466;opacity:.13}
+@media (prefers-color-scheme: dark){
+.bg-t{stop-color:#1b2430}.bg-b{stop-color:#141b24}
+.i{stroke:#a9bfdc}.a{stroke:#e58c4f}.f{fill:#a9bfdc}.fa{fill:#e58c4f}.d{fill:#a9bfdc;opacity:.12}
+}
+</style>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="bg-t"/><stop offset="1" class="bg-b"/></linearGradient>
+<pattern id="p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="1.6" class="d"/></pattern>
+</defs>
+<rect width="600" height="300" fill="url(#g)"/>
+<rect width="600" height="300" fill="url(#p)"/>
+
+<path class="i" d="M150 240 L230 200 L300 225 L380 185 L450 205"/>
+<path class="i" stroke-dasharray="2 16" d="M150 270 L230 230 L300 255 L380 215 L450 235"/>
+<path class="a" d="M300 225 V95"/><path class="a" d="M300 95 L370 112 L300 130"/>
+<rect class="i" x="395" y="70" width="80" height="80" rx="8"/><rect class="i" x="412" y="70" width="46" height="26"/>
+<rect class="i" x="410" y="114" width="50" height="36"/>
+<path class="i" d="M150 115 A40 40 0 1 1 165 150"/><path class="i" d="M150 92 V117 H175"/>
+
+</svg>

@@ -23,8 +23,8 @@ weight: 13                  # l'ordre dans sa catégorie
 category: dcs               # games, dcs ou apps
 role: author                # author ou contributor
 org: "VEAF"                 # facultatif
-featured: true              # facultatif : sur l'accueil
-image: "img/projet.png"     # facultatif : une image dans assets/img/
+featured: true              # facultatif : en tête de l'accueil
+image: "img/projet.png"     # une image dans assets/img/ (capture réduite par Hugo, ou SVG tel quel)
 links:
   site: "https://…"         # facultatifs, dans cet ordre : site, docs, code
   code: "https://github.com/…"
@@ -33,7 +33,9 @@ links:
 Deux lignes de présentation, une phrase par ligne.
 ```
 
-Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur la page des réalisations (et sur l'accueil s'il est `featured`).
+Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur la page des réalisations et sur l'accueil.
+L'accueil en montre neuf : les `featured` d'abord, puis les autres par `weight`.
+Un projet sans capture d'écran reçoit une illustration dessinée : sa couverture s'ajoute dans `tools/covers.py`, puis `python tools/covers.py assets/img/covers` les redessine toutes.
 
 ## Le style
 

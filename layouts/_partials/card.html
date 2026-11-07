@@ -2,8 +2,12 @@
 <article class="card{{ with .Params.image }} with-image{{ end }}">
   {{- with .Params.image }}
   {{- with resources.Get . }}
+  {{- if eq .MediaType.SubType "svg" }}
+  <img src="{{ (. | fingerprint).RelPermalink }}" width="600" height="300" alt="" loading="lazy">
+  {{- else }}
   {{- $img := .Resize "600x webp q82" }}
   <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" loading="lazy">
+  {{- end }}
   {{- end }}
   {{- end }}
   <div class="body">

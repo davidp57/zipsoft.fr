@@ -3,6 +3,7 @@ title: "Hoard"
 weight: 10
 category: apps
 role: author
+image: "img/covers/hoard.svg"
 links:
   code: "https://github.com/davidp57/hoard"
 ---
