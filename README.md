@@ -34,7 +34,8 @@ Deux lignes de présentation, une phrase par ligne.
 ```
 
 Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur la page des réalisations et sur l'accueil.
-L'accueil en montre neuf : les `featured` d'abord, puis les autres par `weight`.
+Sur la page des réalisations, les projets `author` sont rangés par catégorie, et les `contributor` (les projets d'autres auxquels je participe) ont leur propre partie, « Contributions », à la fin.
+L'accueil ne montre que les projets `author`, neuf au plus : les `featured` d'abord, puis les autres par `weight`.
 Un projet sans capture d'écran reçoit une illustration dessinée : sa couverture s'ajoute dans `tools/covers.py`, puis `python tools/covers.py assets/img/covers` les redessine toutes.
 
 ## Le style
