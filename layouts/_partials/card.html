@@ -19,6 +19,7 @@
     <div class="text">{{ .Content }}</div>
     <p class="links">
       {{- with .Params.links.site }}<a href="{{ . }}">{{ T "site" }}</a>{{ end }}
+      {{- with .Params.links.itch }}<a href="{{ . }}">{{ T "itch" }}</a>{{ end }}
       {{- with .Params.links.discord }}<a href="{{ . }}">{{ T "discord" }}</a>{{ end }}
       {{- with .Params.links.docs }}<a href="{{ . }}">{{ T "docs" }}</a>{{ end }}
       {{- with .Params.links.code }}<a href="{{ . }}">{{ T "code" }}</a>{{ end }}

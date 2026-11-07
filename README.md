@@ -25,7 +25,8 @@ role: author                # author ou contributor
 org: "VEAF"                 # facultatif
 image: "img/projet.png"     # une image dans assets/img/ (capture réduite par Hugo, ou SVG tel quel)
 links:
-  site: "https://…"         # facultatifs, affichés dans cet ordre : site, discord, docs, code
+  site: "https://…"         # facultatifs, affichés dans cet ordre : site, itch, discord, docs, code
+  itch: "https://….itch.io/…"
   discord: "https://discord.gg/…"
   code: "https://github.com/…"
 ---
