@@ -62,6 +62,12 @@ code { font: .9em var(--mono); background: var(--accent-soft); padding: .1em .35
 .intro { font-size: 1.15rem; }
 .intro h1 { font-size: 2.4rem; }
 
+/* A round portrait beside the text: the drawn avatar on the home page, the photo on Contact */
+.with-portrait { display: flex; align-items: flex-start; gap: 1.5rem; }
+.with-portrait > div { flex: 1; min-width: 0; }
+.portrait { flex: none; border-radius: 50%; border: 1px solid var(--line); }
+.intro.with-portrait .portrait { margin-top: .5rem; }
+
 /* Cards */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1rem; }
 .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }

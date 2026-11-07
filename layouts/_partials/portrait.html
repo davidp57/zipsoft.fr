@@ -1,0 +1,19 @@
+{{- /* A round portrait, from the page's front matter:
+    portrait:
+      image: "img/….png"   # in assets/img/
+      alt: "…"
+  Called with (dict "page" <the page> "size" <px>): drawn at most size × size, never larger than the image itself,
+  from a square crop twice the drawn size when the image has the pixels, for sharp screens. */}}
+{{- $size := .size }}
+{{- with .page.Params.portrait }}
+{{- $alt := .alt }}
+{{- if not $alt }}{{ warnf "%s: the portrait has no alt text" $.page.File.Path }}{{ end }}
+{{- with resources.Get .image }}
+{{- $shown := int (math.Min .Width .Height $size) }}
+{{- $px := int (math.Min .Width .Height (mul $shown 2)) }}
+{{- $img := .Fill (printf "%dx%d webp q85 Center" $px $px) }}
+<img class="portrait" src="{{ $img.RelPermalink }}" width="{{ $shown }}" height="{{ $shown }}" alt="{{ $alt }}">
+{{- else }}
+{{- warnf "%s: portrait image %q not found in assets/" $.page.File.Path .image }}
+{{- end }}
+{{- end -}}

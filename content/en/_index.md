@@ -4,6 +4,9 @@ linkTitle: "Home"
 # the projects page is gone: its cards are on the home page
 aliases: ["/projects/"]   # relative to /en/
 description: "David \"Zip\" Pierron: a game, tools for DCS World and the VEAF, self-hosted applications."
+portrait:
+  image: "img/zip-avatar.png"
+  alt: "Zip, as a cartoon avatar"
 ---
 
 # Hi, I'm Zip.

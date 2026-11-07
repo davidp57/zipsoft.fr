@@ -1,6 +1,9 @@
 ---
 title: "Contact"
 description: "Écrire à David \"Zip\" Pierron."
+portrait:
+  image: "img/david-photo.jpg"
+  alt: "David Pierron"
 ---
 
 - **Par e-mail** : [contact@zipsoft.fr](mailto:contact@zipsoft.fr).
