@@ -1,4 +1,7 @@
-{{- /* One project: its picture if it has one, two lines, the role, the links. */}}
+{{- /* One project: its picture if it has one, two lines, the role, the links.
+  Called with (dict "page" <the project> "level" <3 or 4>): the level of its title, under the heading above it. */}}
+{{- $level := .level }}
+{{- with .page }}
 <article class="card{{ with .Params.image }} with-image{{ end }}">
   {{- with .Params.image }}
   {{- with resources.Get . }}
@@ -11,7 +14,7 @@
   {{- end }}
   {{- end }}
   <div class="body">
-    <h3>{{ .Title }}</h3>
+    {{ if eq $level 4 }}<h4 class="title">{{ .Title }}</h4>{{ else }}<h3 class="title">{{ .Title }}</h3>{{ end }}
     <p class="role">{{ if eq .Params.role "contributor" }}{{ T "contributor" }}{{ else }}{{ T "author" }}{{ end }}{{ with .Params.org }} · {{ . }}{{ end }}{{ with .Params.tech }} · {{ . }}{{ end }}</p>
     <div class="text">{{ .Content }}</div>
     <p class="links">
@@ -21,3 +24,4 @@
     </p>
   </div>
 </article>
+{{- end }}

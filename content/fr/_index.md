@@ -1,6 +1,8 @@
 ---
 title: "zipsoft"
 linkTitle: "Accueil"
+# the projects page is gone: its cards are on the home page
+aliases: ["/realisations/"]
 description: "David \"Zip\" Pierron : un jeu, des outils pour DCS World et la VEAF, des applications auto-hébergées."
 ---
 

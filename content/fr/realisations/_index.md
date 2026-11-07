@@ -1,7 +1,10 @@
 ---
 title: "Réalisations"
-description: "Les jeux, les outils pour DCS World et les applications de David \"Zip\" Pierron."
-# cards only: a project has no page of its own (yet)
+# A data folder, not a page: the home page shows these cards (layouts/home.html).
+# Neither the section nor the cards are built; the old /realisations/ URL redirects to the home page.
+build:
+  render: never
+  list: never
 cascade:
   - target:
       kind: page
@@ -9,6 +12,3 @@ cascade:
       render: never
       list: always
 ---
-
-Ce que j'ai fait, puis les projets auxquels je contribue.
-Presque tout est open source : le code est sur GitHub.

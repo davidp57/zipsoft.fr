@@ -5,7 +5,6 @@ category: dcs
 role: author
 image: "img/vmct.png"
 org: "VEAF"
-featured: true
 links:
   docs: "https://veaf.github.io/VEAF-Mission-Creation-Tools/"
   code: "https://github.com/VEAF/VEAF-Mission-Creation-Tools"
