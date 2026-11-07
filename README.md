@@ -25,7 +25,8 @@ role: author                # author ou contributor
 org: "VEAF"                 # facultatif
 image: "img/projet.png"     # une image dans assets/img/ (capture réduite par Hugo, ou SVG tel quel)
 links:
-  site: "https://…"         # facultatifs, dans cet ordre : site, docs, code
+  site: "https://…"         # facultatifs, affichés dans cet ordre : site, discord, docs, code
+  discord: "https://discord.gg/…"
   code: "https://github.com/…"
 ---
 
@@ -36,6 +37,19 @@ Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur l'accueil
 Les projets `author` sont dans « Mes réalisations », rangés par catégorie (jeux, DCS, applications) puis par `weight` (une catégorie inconnue arrête la construction) ; les `contributor` (les projets d'autres auxquels je participe) ont leur propre partie, « Mes contributions », à la fin.
 Le dossier `realisations/` ne sert qu'à ranger les fiches : il n'est pas construit en page, et ses anciennes adresses (`/realisations/`, `/en/projects/`) redirigent vers l'accueil de leur langue.
 Un projet sans capture d'écran reçoit une illustration dessinée : sa couverture s'ajoute dans `tools/covers.py`, puis `python tools/covers.py assets/img/covers` les redessine toutes.
+
+## Les portraits
+
+L'accueil et les pages simples (Contact, mentions légales) peuvent afficher un portrait rond à côté de leur texte, déclaré dans le front matter de la page :
+
+```yaml
+portrait:
+  image: "img/zip-avatar.png"   # une image dans assets/img/, recadrée au carré par Hugo
+  alt: "Zip, en avatar dessiné"  # obligatoire : sans lui, la construction s'arrête
+```
+
+L'accueil (`content/<langue>/_index.md`) montre l'avatar dessiné, à 120 px ; Contact (`content/<langue>/contact.md`) la photo, à 96 px, jamais plus grande que l'image elle-même.
+Sur mobile, le portrait passe au-dessus du texte.
 
 ## Le style
 
