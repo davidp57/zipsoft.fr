@@ -7,7 +7,7 @@ image: "img/hotas-kneeboard.en.png"
 org: "VEAF"
 links:
   discord: "https://discord.gg/YezPzzQ"
-  docs: "https://veaf.github.io/hotas-kneeboard/"
+  docs: "https://veaf.github.io/hotas-kneeboard/latest/en/"
   code: "https://github.com/VEAF/hotas-kneeboard"
 ---
 

@@ -5,7 +5,7 @@ category: games
 role: author
 image: "img/irongall.png"
 links:
-  site: "https://irongall.zipsoft.fr"
+  site: "https://irongall.zipsoft.fr/fr/"
   discord: "https://discord.gg/EhGnp6CqnS"
 ---
 

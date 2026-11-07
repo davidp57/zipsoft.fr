@@ -33,6 +33,7 @@ links:
 Deux lignes de présentation, une phrase par ligne.
 ```
 
+Chaque fiche pointe vers la version du site cible dans sa propre langue, quand elle existe : la fiche française vers la version française, l'anglaise vers l'anglaise (la documentation de VMCT et le site d'Issued n'existent qu'en anglais).
 Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur l'accueil, et toutes les fiches y sont.
 Les projets `author` sont dans « Mes réalisations », rangés par catégorie (jeux, DCS, applications) puis par `weight` (une catégorie inconnue arrête la construction) ; les `contributor` (les projets d'autres auxquels je participe) ont leur propre partie, « Mes contributions », à la fin.
 Le dossier `realisations/` ne sert qu'à ranger les fiches : il n'est pas construit en page, et ses anciennes adresses (`/realisations/`, `/en/projects/`) redirigent vers l'accueil de leur langue.
