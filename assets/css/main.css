@@ -53,7 +53,7 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -.01em; }
 h1 { font-size: 2rem; margin: .5rem 0 1rem; }
 h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; font-family: var(--mono); font-weight: 600; }
 h2::before { content: "## "; color: var(--accent); }
-.category h3 { font: 600 1rem var(--mono); color: var(--muted); margin: 1.8rem 0 .8rem; }
+.category h3 { font: 600 1.1rem var(--mono); color: var(--muted); margin: 1.8rem 0 .8rem; }
 .category h3::before { content: "### "; color: var(--accent); }
 .prose { max-width: 70ch; }
 .prose p, .prose ul { margin: 0 0 1rem; }
