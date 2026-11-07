@@ -1,6 +1,13 @@
 {{ define "main" }}
 <article class="prose">
   <h1>{{ .Title }}</h1>
+  {{- with partial "portrait.html" (dict "page" . "size" 96) }}
+  <div class="with-portrait">
+    {{ . }}
+    <div>{{ $.Content }}</div>
+  </div>
+  {{- else }}
   {{ .Content }}
+  {{- end }}
 </article>
 {{ end }}

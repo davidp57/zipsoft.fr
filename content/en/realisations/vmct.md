@@ -6,6 +6,7 @@ role: author
 image: "img/vmct.png"
 org: "VEAF"
 links:
+  discord: "https://discord.gg/YezPzzQ"
   docs: "https://veaf.github.io/VEAF-Mission-Creation-Tools/"
   code: "https://github.com/VEAF/VEAF-Mission-Creation-Tools"
 ---
