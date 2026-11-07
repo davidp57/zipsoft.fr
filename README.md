@@ -33,7 +33,7 @@ Deux lignes de présentation, une phrase par ligne.
 ```
 
 Un projet n'a pas de page à lui : il n'apparaît que comme fiche, sur l'accueil, et toutes les fiches y sont.
-Les projets `author` sont dans « Mes réalisations », rangés par catégorie (jeux, DCS, applications) puis par `weight` ; les `contributor` (les projets d'autres auxquels je participe) ont leur propre partie, « Mes contributions », à la fin.
+Les projets `author` sont dans « Mes réalisations », rangés par catégorie (jeux, DCS, applications) puis par `weight` (une catégorie inconnue arrête la construction) ; les `contributor` (les projets d'autres auxquels je participe) ont leur propre partie, « Mes contributions », à la fin.
 Le dossier `realisations/` ne sert qu'à ranger les fiches : il n'est pas construit en page, et ses anciennes adresses (`/realisations/`, `/en/projects/`) redirigent vers l'accueil de leur langue.
 Un projet sans capture d'écran reçoit une illustration dessinée : sa couverture s'ajoute dans `tools/covers.py`, puis `python tools/covers.py assets/img/covers` les redessine toutes.
 
