@@ -6,6 +6,7 @@ role: author
 image: "img/irongall.png"
 links:
   site: "https://irongall.zipsoft.fr/"
+  itch: "https://davidp57.itch.io/iron-gall"
   discord: "https://discord.gg/EhGnp6CqnS"
 ---
 
